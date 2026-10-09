@@ -4,18 +4,19 @@
     <title>JavaScript Program</title>
 </head>
 
-<body>
+<body bgcolor="lightblue">
+    <h1>JavaScript Program</h1>
 
 <script>
     var choice = window.prompt("Please select one:\n1:Execute the Program\n2:Exit");
 
     if (choice == "1") {
         var n = window.prompt("Input an integer:");
-
-        document.write("<table border='1'><thead><tr><th>Number</th><th>Square</th><th>Cube</th></tr></thead>");
+        document.write("<h2>Number, Square and Cube Table</h2>");
+        document.write("<table border='1'  cellpadding='12' cellspacing='0' width='450' bordercolor='darkblue'><thead><tr><th>Number</th><th>Square</th><th>Cube</th></tr></thead>");
 
         for (var i = 0; i <= n; i++) {
-            document.write("<tbody><tr><td>" + i + "</td><td>" + (i * i) + "</td><td>" + (i * i * i) + "</td></tr></tbody>");
+            document.write("<tbody><tr align='center'><td>" + i + "</td><td>" + (i * i) + "</td><td>" + (i * i * i) + "</td></tr></tbody>");
         }
     } 
     else if (choice == "2") { 
