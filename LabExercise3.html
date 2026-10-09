@@ -1,33 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>JavaScript Program</title>
+    <title>JavaScript Program</title>
 </head>
 
 <body bgcolor="white" align="center">
-    <br><br>
-    <hr>
-    <h1 align="center">JavaScript Program</h1>
+    <br><br>
+    <hr>
+    <h1 align="center">JavaScript Program</h1>
 
 <script>
-    var choice = window.prompt("Please select one:\n1:Execute the Program\n2:Exit");
+    var choice = window.prompt("Please select one:\n1:Execute the Program\n2:Exit");
 
-    if (choice == "1") {
-        var n = window.prompt("Input an integer:");
-        document.write("<center>")
-        document.write("<h2>Number, Square and Cube Table</h2>");
-        document.write("<table border='3'  cellpadding='10' cellspacing='0' width='700' bordercolor='black' bgcolor='lightblue'>");
-        document.write("<thead><tr><th>Number</th><th>Square</th><th>Cube</th></tr></thead>");
+    if (choice == "1") {
+        let inputNum = window.prompt("Input an integer:");
+        let n = parseInt(inputNum);
 
-        for (var i = 0; i <= n; i++) {
-            document.write("<tbody><tr align='center'><td>" + i + "</td><td>" + (i * i) + "</td><td>" + (i * i * i) + "</td></tr></tbody>");
-        }
-    } 
-    else if (choice == "2") { 
-        window.confirm("Confirm to exit?");
-        window.close()
-    } 
-    
+        if (!isNaN(n)) {
+            document.write("<center>")
+            document.write("<h2>Number, Square and Cube Table</h2>");
+            document.write("<table border='3'  cellpadding='10' cellspacing='0' width='700' bordercolor='black' bgcolor='lightblue'>");
+            document.write("<thead><tr><th>Number</th><th>Square</th><th>Cube</th></tr></thead>");
+
+            for (var i = 0; i <= n; i++) {
+                document.write("<tr><td>" + i + "</td><td>" + (i * i) + "</td><td>" + (i * i * i) + "</td></tr>");
+            }
+            document.write("</tbody></table>");
+        } else {
+            alert("Invalid input! Please enter a valid integer.");
+        }
+
+    } else if (choice == "2") {
+        window.confirm("Confirm to exit?");
+        window.close()
+    }
+   
 </script>
 </body>
 </html>
